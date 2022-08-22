@@ -13,8 +13,6 @@ const doFunny = async (
   client: Client<boolean>,
   data: Map<string, string[]>
 ) => {
-  console.log(data);
-
   for (const guild of data.keys()) {
     if (Math.floor(Math.random() * 1000) !== 69 && !process.env.DEV) continue;
 
