@@ -14,7 +14,7 @@ const doFunny = async (
   data: Map<string, string[]>
 ) => {
   for (const guild of data.keys()) {
-    if (Math.floor(Math.random() * 1000) !== 69 && !process.env.DEV) continue;
+    if (Math.floor(Math.random() * 600) !== 69) continue;
 
     const channels = data.get(guild);
     if (!channels) continue;
