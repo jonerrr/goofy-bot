@@ -14,7 +14,7 @@ const doFunny = async (
   data: Map<string, string[]>
 ) => {
   for (const guild of data.keys()) {
-    if (Math.floor(Math.random() * 600) !== 69) continue;
+    if (Math.floor(Math.random() * 400) !== 69) continue;
 
     const channels = data.get(guild);
     if (!channels) continue;
@@ -46,10 +46,11 @@ const doFunny = async (
       guildId: guild,
       adapterCreator: target.guild.voiceAdapterCreator,
     });
+    console.log(`Connection created in ${target.name}`);
 
     const sub = connection.subscribe(player);
 
-    if (sub) console.log("playing resource");
+    if (sub) console.log("Subscription found");
     await entersState(player, AudioPlayerStatus.Idle, 30_000);
     console.log("finished");
 
