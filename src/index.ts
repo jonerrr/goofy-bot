@@ -62,7 +62,7 @@ client.on("channelDelete", async (channel) => {
 
 setInterval(
   () => funny(client, data),
-  process.env.MODE === "DEV" ? 3000 : 800000
+  process.env.MODE === "DEV" ? 3000 : 600000
 );
 
 const updateGuilds = async (guilds: OAuth2Guild[] | Guild[]) => {
