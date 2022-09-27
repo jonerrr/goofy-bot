@@ -70,8 +70,8 @@ const updateGuilds = async (guilds: OAuth2Guild[] | Guild[]) => {
     data.set(
       guild.id,
       (await (await guild.fetch()).channels.fetch())
-        .filter((c) => c.isVoiceBased() && c.joinable)
-        .map((c) => c.id)
+        .filter((c) => c!.isVoiceBased() && c.joinable)
+        .map((c) => c!.id)
     );
 };
 
