@@ -1,3 +1,5 @@
 oldsounds/
 .env.example
 README.md
+.github
+docker-compose.yml
