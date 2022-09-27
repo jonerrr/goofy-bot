@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: goofy-bot:latest
+          tags: j0ner/goofy-bot:latest
